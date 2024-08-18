@@ -42,7 +42,7 @@
         <v-col cols="6">
           <v-number-input
             v-model="medication.days"
-            control-variant="stack"
+            control-variant="stacked"
             label="Days"
             class="input"
           />
