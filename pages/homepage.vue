@@ -54,27 +54,26 @@
       <br>
       <v-row>
         <v-col cols="4">
-          <VBtn @click="selectChoice('Choice 1')"> Before Meal</VBtn>
+          <VBtn @click="selectChoice('Before Meal')"> Before Meal</VBtn>
         </v-col>
         <v-col cols="4">
-          <VBtn @click="selectChoice('Choice 2')"> With Meal</VBtn>
+          <VBtn @click="selectChoice('With Meal')"> With Meal</VBtn>
         </v-col>
         <v-col cols="4">
-          <VBtn @click="selectChoice('Choice 3')"> After Meal </VBtn>
+          <VBtn @click="selectChoice('After Meal')"> After Meal </VBtn>
         </v-col>
       </v-row>
   
       <!-- Notification -->
       <p>Notification</p>
-      <v-responsive max-width="300px" max-height="300px">
+
     <v-time-picker
       v-model="medication.notificationTime"
       landscape
       full-width
       class="mb-4 input"
-      :style="{ maxHeight: '300px' }"
     ></v-time-picker>
-  </v-responsive>
+
 
   
       <!-- Done Button -->
@@ -103,7 +102,7 @@
       },
       saveMedication() {
         this.$router.push({
-          path: '/medication',
+          path: '/index2',
           query: {
             pillsName: this.medication.pillsName,
             numberOfPills: this.medication.numberOfPills,
@@ -113,6 +112,12 @@
           },
         });
       },
+      goToMedicationPage() {
+    // After any actions on the intermediate page, redirect to the medication page
+    this.$router.push({
+      path: '/medication',
+    });
+  },
       goBack() {
         this.$router.go(-1);
       },

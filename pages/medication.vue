@@ -4,43 +4,7 @@
         <v-card-title class="d-flex">
           Medication Management
           <v-spacer />
-          <v-btn class="mb-2" color="primary" dark @click="save">
-            Save Medication
-          </v-btn>
         </v-card-title>
-  
-        <v-container>
-          <v-row>
-            <v-col cols="12" md="6" sm="12">
-              <v-text-field
-                v-model="medication.pillsName"
-                label="Pills Name"
-              ></v-text-field>
-            </v-col>
-            <v-col cols="12" md="6" sm="12">
-              <v-text-field
-                v-model="medication.numberOfPills"
-                label="Number of Pills"
-                type="number"
-              ></v-text-field>
-            </v-col>
-            <v-col cols="12" md="6" sm="12">
-              <v-text-field v-model="medication.days" label="Days" type="number"></v-text-field>
-            </v-col>
-            <v-col cols="12" md="6" sm="12">
-              <v-text-field
-                v-model="medication.selectedChoice"
-                label="Choice"
-              ></v-text-field>
-            </v-col>
-            <v-col cols="12" md="6" sm="12">
-              <v-time-picker
-                v-model="medication.notificationTime"
-                label="Notification Time"
-              ></v-time-picker>
-            </v-col>
-          </v-row>
-        </v-container>
   
         <!-- List of Medication Cards -->
         <v-container>

@@ -27,18 +27,26 @@
     data() {
       return {
         email: '',
-        password: ''
+        password: '',
       };
     },
     methods: {
       onSubmit() {
         // Handle form submission logic
-        this.$router.push({ path: '/homepage' });
+        this.$router.push({ path: '/home',
+        query: this.$route.query,
+         });
       },
-      
-    }
+      goToMedicationPage() {
+        this.$router.push({
+          path: '/home',
+          query: this.$route.query,
+        });
+      },
+    },
   };
   </script>
+  
   
   <style scoped>
   .login-container {
